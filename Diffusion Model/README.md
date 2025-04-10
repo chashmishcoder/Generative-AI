@@ -1,7 +1,8 @@
 # Image Diffusion Model Implementation
 
-![Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/c493474bd0e8d79b2ad784f973906ccfa874ba7a/Diffusion%20Model/download%20(2).png)
+![Forward Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/c493474bd0e8d79b2ad784f973906ccfa874ba7a/Diffusion%20Model/download%20(2).png)
 
+![Reverse Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/main/Diffusion%20Model/download%20(1).png)
 ## Overview
 
 This repository contains an implementation of a diffusion-based generative model inspired by Denoising Diffusion Probabilistic Models (DDPM) and Denoising Diffusion Implicit Models (DDIM). The model demonstrates how to train a neural network to gradually denoise an image, starting from pure noise.
