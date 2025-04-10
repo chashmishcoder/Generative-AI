@@ -1,0 +1,28 @@
+# Image Diffusion Model Implementation
+
+![Diffusion Process](https://github.com/username/repo-name/raw/main/assets/diffusion_process.png)
+
+## Overview
+
+This repository contains an implementation of a diffusion-based generative model inspired by Denoising Diffusion Probabilistic Models (DDPM) and Denoising Diffusion Implicit Models (DDIM). The model demonstrates how to train a neural network to gradually denoise an image, starting from pure noise.
+
+## Features
+
+- 🧠 Neural network-based diffusion model with U-Net architecture
+- 🔄 Forward diffusion process (adding noise gradually)
+- ↩️ Reverse diffusion process (denoising to generate images)
+- 📊 Training and sampling pipelines
+- 🚀 Advanced techniques for better quality:
+  - Self-attention mechanisms
+  - Cosine noise schedule
+  - EMA (Exponential Moving Average) model tracking
+  - DDIM sampling for faster and higher quality generation
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have Python 3.8+ installed. Then install the required packages:
+
+```bash
+pip install -r requirements.txt
