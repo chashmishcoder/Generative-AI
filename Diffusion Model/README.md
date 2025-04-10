@@ -1,6 +1,6 @@
 # Image Diffusion Model Implementation
 
-![Diffusion Process](https://github.com/username/repo-name/raw/main/assets/diffusion_process.png)
+![Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/c493474bd0e8d79b2ad784f973906ccfa874ba7a/Diffusion%20Model/download%20(2).png)
 
 ## Overview
 
