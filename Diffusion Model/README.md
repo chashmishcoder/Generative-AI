@@ -78,8 +78,12 @@ During sampling, we start with pure noise and gradually denoise using our model.
 ## Results
 
 The model demonstrates the ability to reconstruct an image after complete destruction through the diffusion process.
+
+Forward Diffusion Process
 ![Forward Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/c493474bd0e8d79b2ad784f973906ccfa874ba7a/Diffusion%20Model/download%20(2).png)
 
+
+Reverse Diffusion Process
 ![Reverse Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/main/Diffusion%20Model/download%20(1).png)
 
 ## References
