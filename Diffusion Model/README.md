@@ -21,14 +21,6 @@ This repository contains an implementation of a diffusion-based generative model
 ## Getting Started
 
 
-### Sampling from the Model
-
-To generate a new image from a trained model:
-
-```bash
-python sample_diffusion.py --model_path path/to/saved/model.pth
-```
-
 ## How It Works
 
 ### 1. Forward Diffusion
