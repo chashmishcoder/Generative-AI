@@ -1,8 +1,7 @@
 # Image Diffusion Model Implementation
 
-![Forward Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/c493474bd0e8d79b2ad784f973906ccfa874ba7a/Diffusion%20Model/download%20(2).png)
+![Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/main/Diffusion%20Model/diff_img.png)
 
-![Reverse Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/main/Diffusion%20Model/download%20(1).png)
 ## Overview
 
 This repository contains an implementation of a diffusion-based generative model inspired by Denoising Diffusion Probabilistic Models (DDPM) and Denoising Diffusion Implicit Models (DDIM). The model demonstrates how to train a neural network to gradually denoise an image, starting from pure noise.
@@ -27,3 +26,68 @@ Make sure you have Python 3.8+ installed. Then install the required packages:
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Training the Model
+
+To train the diffusion model on your own image:
+
+```bash
+python train_diffusion.py --input_image path/to/your/image.jpg --epochs 50
+```
+
+### Sampling from the Model
+
+To generate a new image from a trained model:
+
+```bash
+python sample_diffusion.py --model_path path/to/saved/model.pth
+```
+
+## How It Works
+
+### 1. Forward Diffusion
+
+The forward diffusion process gradually adds noise to an image following a predefined schedule:
+
+```python
+x_t = sqrt(α_t) * x_0 + sqrt(1 - α_t) * ε
+```
+
+Where:
+- `x_0` is the original image
+- `x_t` is the noisy image at timestep t
+- `α_t` is the cumulative product of (1-β_t)
+- `ε` is random noise sampled from a normal distribution
+
+### 2. Neural Network Training
+
+The U-Net model is trained to predict the noise added during the forward process.
+
+### 3. Reverse Diffusion
+
+During sampling, we start with pure noise and gradually denoise using our model.
+
+## Implementation Details
+
+- **Architecture**: U-Net with self-attention and residual blocks
+- **Sampling**: DDIM for faster, higher-quality sampling
+- **Optimization**: AdamW with weight decay and learning rate scheduling
+- **Stability**: Gradient clipping and EMA parameter updates
+
+## Results
+
+The model demonstrates the ability to reconstruct an image after complete destruction through the diffusion process.
+![Forward Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/c493474bd0e8d79b2ad784f973906ccfa874ba7a/Diffusion%20Model/download%20(2).png)
+
+![Reverse Diffusion Process](https://github.com/chashmishcoder/Generative-AI/blob/main/Diffusion%20Model/download%20(1).png)
+
+## References
+
+- [Denoising Diffusion Probabilistic Models (DDPM)](https://arxiv.org/abs/2006.11239)
+- [Denoising Diffusion Implicit Models (DDIM)](https://arxiv.org/abs/2010.02502)
+- [Improved Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2102.09672)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
