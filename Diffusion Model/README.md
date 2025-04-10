@@ -20,21 +20,6 @@ This repository contains an implementation of a diffusion-based generative model
 
 ## Getting Started
 
-### Prerequisites
-
-Make sure you have Python 3.8+ installed. Then install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Training the Model
-
-To train the diffusion model on your own image:
-
-```bash
-python train_diffusion.py --input_image path/to/your/image.jpg --epochs 50
-```
 
 ### Sampling from the Model
 
